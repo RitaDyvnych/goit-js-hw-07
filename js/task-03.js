@@ -12,3 +12,8 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const makeGalleryEl = (image) => `<li class="grid__items"><img class="gallery__img" src="${image.url}" alt="${image.alt}"></li>`;
+const makeAllGalleryEl = images.map(makeGalleryEl).join('');
+const insertListEl = document.querySelector('ul#gallery');
+insertListEl.insertAdjacentHTML('afterbegin', makeAllGalleryEl)
