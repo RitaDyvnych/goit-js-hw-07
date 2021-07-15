@@ -18,6 +18,7 @@ function onRenderButtonClick(event) {
     inputEl.removeEventListener('input', onInputChange);
 
     createBoxes(amount);
+    inputEl.value = '';
 }
 
 function createBoxes(amount) {
